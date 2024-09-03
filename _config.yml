@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "133fd869e89a65d95a25162cb844317.png"
   name             : "Linhan Xia"
   pronouns         : # example: "he/him"  
   bio              : "Short biography for the left-hand sidebar"
