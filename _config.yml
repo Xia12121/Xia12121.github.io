@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Mr."
+title                    : "Linhan Xia's Personal Homepage"
 title_separator          : "-"
 name                     : &name "Linhan Xia"
 description              : &description "personal description"
