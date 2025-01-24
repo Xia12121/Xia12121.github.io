@@ -9,7 +9,7 @@ redirect_from:
 
 👋 **Hello!**  
 My name is Linhan Xia, but you can call me Chris. I graduated from **Hong Kong Baptist University (Zhuhai)**. Currently, I am an **intern research assistant** at **INCLab, Shenzhen Graduate School, Peking University**, working with Professor [Kai Lei](https://www.researchgate.net/profile/Kai-Lei/2). During my undergraduate studies, I was a member of the **Guangdong Provincial Key Laboratory of Interdisciplinary Research and Application for Data Science**, supervised by [Ricky Yuen-tan Hou](https://staff.uic.edu.cn/rickyhou/en). 
-
+---
 🎯 **Research Interests**  
 My previous works major lie in:  
 - **Natural Language Processing**  
