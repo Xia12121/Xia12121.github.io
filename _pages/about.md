@@ -19,6 +19,8 @@ My research interests lie in:
 
 Welcome to my personal homepage, where you can explore my **resume** and **recent research**.  
 
+---
+
 📬 **Seeking Opportunities**  
 I am actively seeking a **PhD position**. If you are interested in my profile, please leave your contact information or [email me directly](mailto:linhanxia@outlook.com).
 
