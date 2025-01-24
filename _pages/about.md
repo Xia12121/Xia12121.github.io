@@ -15,7 +15,7 @@ My research interests lie in:
 - **Natural Language Processing**  
 - **Multi-Modal Fusion**  
 - **Recommendation Systems**  
-- **Semantic Communication**  
+- **Large Language Models**  
 
 Welcome to my personal homepage, where you can explore my **resume** and **recent research**.  
 
@@ -25,4 +25,5 @@ I am actively seeking a **PhD position**. If you are interested in my profile, p
 ---
 
 🚀 **Recent Researches and Activities**  
-- 🏆 **Oral Defense in ICCT 2024**: Presented my research and received the Best Presentation Award.
+- 🏆 **Oral Defense in ICCT 2024**: Presented my research of machine to machine semantic communication and received the Best Presentation Award. (work under supervision of Dr. Ricky Hou)
+- 🔬 **Recent research**: Currently, I am working on Mamba4Net at INCLab under the guidance of Prof. Lei. My research focuses on developing a knowledge distillation framework to achieve lightweight applications of **Large Language Models (LLMs)** in network-related tasks. This involves compressing LLMs while maintaining their performance, enabling efficient deployment in real-world network scenarios.
