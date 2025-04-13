@@ -22,13 +22,13 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile1.png"
-  name             : "Linhan Xia"
+  name             : "Linhan XIA"
   pronouns         : "he/him"  
-  bio              : "I am an incoming Ph.D. student!"
-  location         : "P.R.China"
-  employer         : "ICNLab, Shenzhen Graduate School, Peking University"
+  bio              : "Ph.D. student from University of Oklahoma"
+  location         : "Norman, OK"
+  employer         : "University of Oklahoma"
   uri              : # URL
-  email            : "Linhanxia@aliyun.com" 
+  email            : "linhan.xia@ou.edu" 
 
   # Academic websites
   #arxiv            : # URL - Update with the correct link to your profile
