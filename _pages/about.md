@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 👋 **Hello!**  
-My name is Linhan Xia, but you can call me Chris. I graduated from Hong Kong Baptist University. Currently, I am an intern research assistant at INCLab, Shenzhen Graduate School, Peking University, working with Professor [Kai Lei](https://www.researchgate.net/profile/Kai-Lei/2). During my undergraduate studies, I was a member of the Guangdong Provincial Key Laboratory of Interdisciplinary Research and Application for Data Science, supervised by [Ricky Yuen-tan Hou](https://staff.uic.edu.cn/rickyhou/en). 
+My name is Linhan Xia, but you can call me Chris. I graduated from Hong Kong Baptist University. Currently, I am an intern research assistant at Shenzhen Graduate School, Peking University, working with Professor [Kai Lei](https://www.researchgate.net/profile/Kai-Lei/2). During my undergraduate studies, I was an RA of Beijing Normal-Hong Kong Baptist University supervised by Professor [Ricky Yuen-tan Hou](https://staff.uic.edu.cn/rickyhou/en). 
 
 By 2025 Fall, I will join University of Oklahoma as a Ph.D. student under supervision of Dr. Yifu Li.
 
