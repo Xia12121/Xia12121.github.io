@@ -10,12 +10,12 @@ redirect_from:
 {% include base_path %}
 
 # Education
-======
+---
 * B.S. in Computer Science and Technology, Beijing Normal-Hong Kong Baptist University, from 2020 to 2024.
 * Ph.D. in Industrial Engineering, University of Oklahoma, strat by 2025.
 
 # Work experience
-======
+---
 ## Peking University | Research Assistant | Shenzhen | 06/2024 – Present
 - Took the role of research assistant as a member of Shenzhen Graduate School, Peking University, and undertook research in the field of Text-based data mining and data analysis. 
 - Finished the research on word sense disambiguation from June to now, and submitted the research results to 28th International Conference on Artificial Intelligence and Statistics (AISTATS 2025). And the other two researches are ongoing.
@@ -31,7 +31,7 @@ redirect_from:
 
 
 # Publications
-======
+---
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
