@@ -15,9 +15,10 @@ By 2025 Fall, I will join University of Oklahoma as a Ph.D. student under superv
 ---
 🎯 **Research Interests**  
 My previous works major lie in:  
-- **Natural Language Processing**  
-- **Multi-Modal Fusion**  
-- **Recommendation Systems**   
+- **Text-based Data Mining**  
+- **Intelligent Supply Chain Management**  
+- **Recommendation Systems**
+- 
 ---
 
 🚀 **Recent Researches and Activities**  
