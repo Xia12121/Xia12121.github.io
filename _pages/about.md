@@ -14,12 +14,13 @@ My name is Linhan Xia, and you can call me Chris. I graduated from Hong Kong Bap
 ---
 🎯 **Research Interests**  
 My previous works major lie in:  
-- **Text-based Data Mining**  
+- **Natural Language Processing**  
 - **Data-driven Modeling**  
-- **Recommendation Systems**
+- **Deep Learning**
 
 ---
 
 🚀 **Recent Researches and Activities**  
 - 🏆 **Oral Defense in ICCT 2024**: Presented my research of machine to machine semantic communication and received the Best Presentation Award. (work under supervision of Dr. Ricky Hou)
+- 🏆 **Paper Accepted!**: My work "PolyBERT: Fine-Tuned Poly Encoder BERT-Based Model for Word Sense Disambiguation" was accepted by the 18th International Conference on Knowledge Science, Engineering and Management (KSEM 2025). Worked with Prof. Kai Lei and Ms Mingzhan Yang.
 
