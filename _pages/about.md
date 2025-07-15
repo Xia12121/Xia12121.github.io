@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 👋 **Hello!**  
-My name is Linhan Xia, and you can call me Chris. I graduated from Hong Kong Baptist University. Currently, I am a Ph.D. student from University of Oklahoma, department of Industrial Engineering System, under supervision of Dr. Yifu Li. Before I joined OU, I was research assistant at Shenzhen Graduate School, Peking University, working with Professor [Kai Lei](https://www.researchgate.net/profile/Kai-Lei/2). During my undergraduate studies, I was an RA of Beijing Normal-Hong Kong Baptist University supervised by Professor [Ricky Yuen-tan Hou](https://staff.uic.edu.cn/rickyhou/en). 
+My chinese name is Linhan Xia, but you guys can call me Chris. I come from P.R.China and I graduated from Hong Kong Baptist University. Currently, I am a Ph.D. student from University of Oklahoma, department of Industrial Engineering System, under supervision of Dr. Yifu Li. Before that, I served as a research assistant at ICNLab, Shenzhen Graduate School, Peking University, working with Prof. [Kai Lei](https://www.researchgate.net/profile/Kai-Lei/2). During my undergraduate studies, I was an RA of Beijing Normal-Hong Kong Baptist University supervised by Prof. [Ricky Yuen-tan Hou](https://staff.uic.edu.cn/rickyhou/en). 
 
 
 ---
@@ -22,5 +22,5 @@ My previous works major lie in:
 
 🚀 **Recent Researches and Activities**  
 - 🏆 **Oral Defense in ICCT 2024**: Presented my research of machine to machine semantic communication and received the Best Presentation Award. (work under supervision of Dr. Ricky Hou)
-- 🏆 **Paper Accepted!**: My work "PolyBERT: Fine-Tuned Poly Encoder BERT-Based Model for Word Sense Disambiguation" was accepted by the 18th International Conference on Knowledge Science, Engineering and Management (KSEM 2025). Worked with Prof. Kai Lei and Ms Mingzhan Yang.
+- 🏆 **Paper Accepted!**: My work "PolyBERT: Fine-Tuned Poly Encoder BERT-Based Model for Word Sense Disambiguation" was accepted by the 18th International Conference on Knowledge Science, Engineering and Management (KSEM 2025). Worked with Prof. Kai Lei and Ms. Mingzhan Yang.
 
