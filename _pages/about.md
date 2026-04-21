@@ -138,7 +138,7 @@ redirect_from:
 
 <div class="hp-bio" markdown="1">
 
-I'm **Linhan Xia** (夏霖翰) — you can also call me **Chris**. I was born and raised in the People's Republic of China, and I received my bachelor's degree from **Hong Kong Baptist University**. I am currently pursuing a Ph.D. at the **University of Oklahoma**, where my work centers on machine learning for financial time-series data.
+I'm **Linhan Xia** (夏霖翰) — you can also call me **Chris**. I was born and raised in the People's Republic of China, and I received my bachelor's degree from **Hong Kong Baptist University**. I am currently pursuing a Ph.D. at the **University of Oklahoma**, where my work centers on model-assisted CAD generation.
 
 Before joining OU, I was a research assistant at **ICNLab, Peking University Shenzhen Graduate School**, working with Prof. [Kai Lei](https://www.researchgate.net/profile/Kai-Lei/2). During my undergraduate years, I worked as a research assistant at **Beijing Normal University–Hong Kong Baptist University United International College (UIC)** under the supervision of Prof. [Ricky Yuen-tan Hou](https://staff.uic.edu.cn/rickyhou/en).
 
@@ -148,7 +148,7 @@ Before joining OU, I was a research assistant at **ICNLab, Peking University She
 
 <div class="hp-interests">
   <div class="hp-card">
-    <div class="hp-card-title">Machine Learning</div>
+    <div class="hp-card-title">Data-driven modeling</div>
     <div class="hp-card-desc">Continuous-time neural architectures, sequence modeling, and representation learning.</div>
   </div>
   <div class="hp-card">
