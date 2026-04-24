@@ -124,6 +124,94 @@ redirect_from:
     color: #333;
   }
   .hp-cta a { font-weight: 600; }
+
+  /* ---------- Publications ---------- */
+  .hp-pub-group { margin-bottom: 1.4em; }
+  .hp-pub-group-title {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    margin: 1.1em 0 0.6em 0;
+    padding-left: 0.6em;
+    border-left: 3px solid #c96b1e;
+  }
+  .hp-pub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: pubcounter;
+  }
+  .hp-pub {
+    position: relative;
+    counter-increment: pubcounter;
+    padding: 0.75em 0.95em 0.8em 2.6em;
+    margin-bottom: 0.55em;
+    background: #fafafa;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    line-height: 1.55;
+    font-size: 0.93em;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  }
+  .hp-pub::before {
+    content: counter(pubcounter);
+    position: absolute;
+    left: 0.7em;
+    top: 0.85em;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 0.75em;
+    font-weight: 700;
+    color: #fff;
+    background: #841617;
+    border-radius: 50%;
+  }
+  .hp-pub:hover {
+    border-color: #c96b1e;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    transform: translateY(-1px);
+  }
+  .hp-pub-authors {
+    color: #555;
+    font-size: 0.88em;
+    margin-bottom: 0.25em;
+  }
+  .hp-pub-authors strong { color: #841617; }
+  .hp-pub-title {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.35em;
+    line-height: 1.45;
+  }
+  .hp-pub-venue {
+    font-size: 0.85em;
+    color: #666;
+    font-style: italic;
+  }
+  .hp-pub-badge {
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: 700;
+    padding: 0.14em 0.6em;
+    border-radius: 10px;
+    margin-right: 0.3em;
+    vertical-align: 1px;
+    letter-spacing: 0.5px;
+    font-style: normal;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .hp-pub-badge-review  { background: #e3e3e3; color: #555; }
+  .hp-pub-badge-ccfb    { background: #841617; color: #fff; }
+  .hp-pub-badge-ccfc    { background: #c96b1e; color: #fff; }
+  .hp-pub-badge-ei      { background: #4a6b8a; color: #fff; }
+  .hp-pub-badge-patent  { background: #b8860b; color: #fff; }
+  .hp-pub-badge-arxiv   { background: #6a4c93; color: #fff; }
+  .hp-pub-badge-accepted { background: #2e8b57; color: #fff; }
 </style>
 
 <div class="hp-hero" markdown="1">
@@ -170,6 +258,107 @@ Before joining OU, I was a research assistant at **ICNLab, Peking University She
     🎉 Our paper <strong>"Liquid Time Constant Neural Networks for Crypto LOB Prediction: A Benchmark Study"</strong> (Paper&nbsp;#5901) has been accepted by <strong>KSEM 2026</strong> as an <strong>AICom2</strong> paper. Many thanks to the program committee and all collaborators!
   </li>
 </ul>
+
+<div class="hp-section-title"><span class="hp-ico">📚</span> Publications</div>
+
+<p style="font-size:0.85em; color:#777; margin: 0 0 0.6em 0;">
+  <strong style="color:#841617;">Bold</strong> indicates myself; <code style="background:#f2f2f2; padding:0 0.3em; border-radius:3px;">*</code> indicates corresponding author.
+</p>
+
+<div class="hp-pub-group">
+  <div class="hp-pub-group-title">Under Review / Preprints</div>
+  <ol class="hp-pub-list">
+    <li class="hp-pub">
+      <div class="hp-pub-authors"><strong>Linhan Xia</strong>, Rui Zhu, Shivakumar Raman, Lee Graves, Yifu Li*</div>
+      <div class="hp-pub-title">VeriCAD: Compiler-Grounded Reinforcement Learning for Executable and Aligned Text-to-CAD Generation</div>
+      <div class="hp-pub-venue"><span class="hp-pub-badge hp-pub-badge-review">Under Review</span></div>
+    </li>
+    <li class="hp-pub">
+      <div class="hp-pub-authors"><strong>Linhan Xia</strong>, Rui Zhu, Shivakumar Raman, Lee Graves, Yifu Li*</div>
+      <div class="hp-pub-title">CPD-LLM: Customized Product Design (CPD) via a Design Syntax-Aware Large Language Model (LLM)</div>
+      <div class="hp-pub-venue"><span class="hp-pub-badge hp-pub-badge-review">Under Review</span></div>
+    </li>
+    <li class="hp-pub">
+      <div class="hp-pub-authors">Qiankang Xv, Haixiao Hu, <strong>Linhan Xia</strong>, Jingjing Wang, Weifan Lin, Yu Guo, Xianneng Zou, Kai Lei*</div>
+      <div class="hp-pub-title">Mamba4Net-MoE: Efficient Multi-Task Network Intelligence via Mixture-of-Experts Distillation on Linear State Space Models</div>
+      <div class="hp-pub-venue"><span class="hp-pub-badge hp-pub-badge-review">Under Review</span></div>
+    </li>
+    <li class="hp-pub">
+      <div class="hp-pub-authors"><strong>Linhan Xia</strong>, Yicheng Yang, Ziou Chen, Zheng Yang, Shengxin Zhu*</div>
+      <div class="hp-pub-title">Movie Recommendation with Poster Attention via Multi-modal Transformer Feature Fusion</div>
+      <div class="hp-pub-venue"><span class="hp-pub-badge hp-pub-badge-arxiv">arXiv Preprint</span></div>
+    </li>
+  </ol>
+</div>
+
+<div class="hp-pub-group">
+  <div class="hp-pub-group-title">Conference Papers</div>
+  <ol class="hp-pub-list">
+    <li class="hp-pub">
+      <div class="hp-pub-authors"><strong>Linhan Xia</strong>, Mingzhan Yang, Jingjing Wang, Ziwei Yan, Yakun Ren, Guo Yu, Kai Lei*</div>
+      <div class="hp-pub-title">Mamba4Net: Distilled Hybrid Mamba Large Language Models for Networking</div>
+      <div class="hp-pub-venue">
+        <span class="hp-pub-badge hp-pub-badge-ccfb">CCF-B</span>
+        <span class="hp-pub-badge hp-pub-badge-ei">EI</span>
+        The 33rd IEEE International Conference on Network Protocols (ICNP 2025)
+      </div>
+    </li>
+    <li class="hp-pub">
+      <div class="hp-pub-authors"><strong>Linhan Xia</strong>, Guohui Yuan, Shengnan Tao, Yujing Qiu, Guo Yu, Kai Lei*</div>
+      <div class="hp-pub-title">Fine-tuned Poly Encoders for Word Sense Disambiguation</div>
+      <div class="hp-pub-venue">
+        <span class="hp-pub-badge hp-pub-badge-ccfc">CCF-C</span>
+        The 18th International Conference on Knowledge Science, Engineering and Management (KSEM 2025)
+      </div>
+    </li>
+    <li class="hp-pub">
+      <div class="hp-pub-authors"><strong>Linhan Xia</strong>, Jiaxin Cai, Ricky Yuen-Tan Hou*, Seon-Phil Jeong</div>
+      <div class="hp-pub-title">Quantification and Validation for Degree of Understanding in M2M Semantic Communications</div>
+      <div class="hp-pub-venue">
+        <span class="hp-pub-badge hp-pub-badge-ei">EI</span>
+        24th International Conference on Communication Technology (ICCT)
+      </div>
+    </li>
+    <li class="hp-pub">
+      <div class="hp-pub-authors"><strong>Linhan Xia*</strong>, Junbang Liu, Tong Wu</div>
+      <div class="hp-pub-title">Depth Estimation Algorithm Based on Transformer-Encoder and Feature Fusion</div>
+      <div class="hp-pub-venue">
+        <span class="hp-pub-badge hp-pub-badge-ei">EI</span>
+        7th International Conference on Advanced Algorithms and Control Engineering (AACE)
+      </div>
+    </li>
+    <li class="hp-pub">
+      <div class="hp-pub-authors"><strong>Linhan Xia*</strong>, Jinyuan Zhang, Bohan Wen</div>
+      <div class="hp-pub-title">Optimization Decision Model of Vegetable Stock and Pricing Based on TCN-Attention and Genetic Algorithm</div>
+      <div class="hp-pub-venue">
+        <span class="hp-pub-badge hp-pub-badge-ei">EI</span>
+        4th International Conference on Computer Science and Management Technology (ICCSMT)
+      </div>
+    </li>
+    <li class="hp-pub">
+      <div class="hp-pub-authors"><strong>Linhan Xia*</strong></div>
+      <div class="hp-pub-title">Chinese Financial Comments Sentiment Detection Based on the Bert-TCN Model with HowNet Disambiguation</div>
+      <div class="hp-pub-venue">
+        <span class="hp-pub-badge hp-pub-badge-ei">EI</span>
+        3rd International Conference on Digital Economy and Computer Application (ICDECA)
+      </div>
+    </li>
+  </ol>
+</div>
+
+<div class="hp-pub-group">
+  <div class="hp-pub-group-title">Patents</div>
+  <ol class="hp-pub-list">
+    <li class="hp-pub">
+      <div class="hp-pub-authors">Kai Lei, Jie Jiang, <strong>Linhan Xia</strong>, Xianneng Zou, Chenghao Ma, Shikun Zhang, Bing Cui, Ziwei Yan, Haiyang Zheng</div>
+      <div class="hp-pub-title">Network Task Model Construction Method Based on Cross-Architecture Knowledge Distillation</div>
+      <div class="hp-pub-venue">
+        <span class="hp-pub-badge hp-pub-badge-patent">Patent</span>
+        Chinese Patent No. CN121396808A
+      </div>
+    </li>
+  </ol>
+</div>
 
 <div class="hp-section-title"><span class="hp-ico">🎓</span> Education</div>
 
