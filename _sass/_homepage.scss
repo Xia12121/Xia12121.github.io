@@ -422,27 +422,199 @@ html[data-theme="dark"] {
 }
 
 
-/* Mobile tweaks */
+/* ==========================================================================
+   RESPONSIVE / MOBILE POLISH
+   ========================================================================== */
+
+/* Tablet & phone (≤ 768px) */
+@media (max-width: 768px) {
+  /* --- Hero --- */
+  .hp-hero h1 { font-size: 1.55em !important; line-height: 1.25; }
+  .hp-hero .hp-sub { font-size: 0.92em; }
+
+  /* --- Section titles --- */
+  .hp-section-title {
+    font-size: 1.08em;
+    margin: 1.3em 0 0.55em 0;
+  }
+
+  /* --- Bio --- */
+  .hp-bio p { font-size: 0.96em; line-height: 1.65; }
+
+  /* --- Research interest cards: stack single-column with tighter padding --- */
+  .hp-interests {
+    grid-template-columns: 1fr;
+    gap: 0.55em;
+  }
+  .hp-card { padding: 0.7em 0.85em; }
+  .hp-card-title { font-size: 0.96em; }
+  .hp-card-desc  { font-size: 0.84em; }
+
+  /* --- News --- */
+  .hp-news li {
+    padding: 0.65em 0.75em 0.65em 0.85em;
+    font-size: 0.9em;
+  }
+  .hp-news .hp-date { display: block; margin-bottom: 0.2em; }
+
+  /* --- Publications: shrink the number badge column --- */
+  .hp-pub {
+    padding: 0.65em 0.8em 0.7em 2.15em;
+    font-size: 0.9em;
+  }
+  .hp-pub::before {
+    left: 0.55em;
+    top: 0.8em;
+    width: 1.3em;
+    height: 1.3em;
+    line-height: 1.3em;
+    font-size: 0.7em;
+  }
+  .hp-pub-authors { font-size: 0.82em; }
+  .hp-pub-title   { font-size: 0.95em; line-height: 1.35; }
+  .hp-pub-venue   { font-size: 0.8em; line-height: 1.5; }
+  .hp-pub-badge {
+    font-size: 0.62em;
+    padding: 0.12em 0.5em;
+    margin-bottom: 0.15em;
+  }
+
+  /* Let venue badges breathe when they wrap */
+  .hp-pub-venue span.hp-pub-badge + span.hp-pub-badge { margin-left: 0; }
+
+  /* --- Education --- */
+  .hp-edu li { font-size: 0.92em; }
+
+  /* --- CTA --- */
+  .hp-cta {
+    padding: 0.85em 0.95em;
+    font-size: 0.92em;
+  }
+
+  /* --- Sidebar: full-width stacked above content --- */
+  .hp-author {
+    .author__avatar img { max-width: 130px; padding: 3px; }
+    .author__avatar::before { width: 138px; height: 138px; }
+    .author__name { font-size: 1.2em; }
+    .author__bio { font-size: 0.82em; padding: 0 1em; }
+    .author__urls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.15em 0.3em;
+      border-top: 1px solid #ececec;
+      padding-top: 0.6em !important;
+      max-width: 520px;
+      margin: 0.6em auto 0 auto !important;
+
+      li {
+        flex: 0 1 auto;
+        font-size: 0.82em;
+
+        a, &.author__desktop { padding: 0.4em 0.6em; }
+      }
+      /* No dashed divider when arranged horizontally */
+      li.author__desktop + li:not(.author__desktop) {
+        border-top: none;
+        padding-top: 0;
+        margin-top: 0 !important;
+      }
+      /* Kill the slide-right hover effect in horizontal layout */
+      li:hover { transform: none; }
+      li::before { display: none; }
+    }
+  }
+}
+
+
+/* Narrow phone (≤ 600px) — masthead-specific tweaks */
 @media (max-width: 600px) {
+  /* Site title: shrink + allow ellipsis so it doesn't collide with switchers */
+  .masthead__menu-item--lg {
+    max-width: calc(100vw - 11rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    a { font-size: 0.88em; }
+  }
+  .masthead__inner-wrap { padding: 0.7em 0.9em 0.7em !important; }
+
+  /* Language switcher — compact pill */
   .lang-switch {
-    right: 3rem;
+    right: 0.6rem;
     padding: 2px;
 
     &__option {
-      min-width: 30px;
+      min-width: 28px;
       height: 24px;
       padding: 0 7px !important;
-      font-size: 0.75em;
+      font-size: 0.72em;
     }
   }
+
+  /* Theme toggle — smaller, snug against lang switcher */
   .greedy-nav button.theme-toggle,
-  button.theme-toggle {
-    right: 7rem !important;
+  button.theme-toggle,
+  button.theme-toggle.hidden {
+    right: 5.2rem !important;
     width: 28px !important;
     height: 28px !important;
+
+    svg { width: 13px; height: 13px; }
   }
-  .masthead .greedy-nav .visible-links {
-    padding-right: 11rem;
+  .masthead .greedy-nav .visible-links { padding-right: 8.5rem; }
+
+  /* Hero */
+  .hp-hero h1 { font-size: 1.35em !important; }
+
+  /* News: single-line date less dominant */
+  .hp-news li { font-size: 0.88em; padding-left: 0.75em; }
+
+  /* Publications: even tighter */
+  .hp-pub {
+    padding: 0.6em 0.7em 0.65em 1.95em;
+    font-size: 0.88em;
+  }
+  .hp-pub::before {
+    left: 0.45em;
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2em;
+    font-size: 0.65em;
+  }
+
+  /* CTA */
+  .hp-cta { font-size: 0.88em; padding: 0.8em; }
+}
+
+
+/* Extra-small phone (≤ 420px) */
+@media (max-width: 420px) {
+  .hp-hero h1 { font-size: 1.22em !important; }
+  .hp-hero .hp-sub { font-size: 0.85em; }
+
+  /* Hide long site title on ultra-narrow — the page itself is obvious */
+  .masthead__menu-item--lg a {
+    font-size: 0 !important;
+  }
+  .masthead__menu-item--lg a::after {
+    content: "LX";
+    font-size: 1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #841617 0%, #c96b1e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+  }
+
+  /* Dark-mode variant for the LX monogram */
+  html[data-theme="dark"] .masthead__menu-item--lg a::after {
+    background: linear-gradient(135deg, #ff9b5e 0%, #ffd580 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
 
