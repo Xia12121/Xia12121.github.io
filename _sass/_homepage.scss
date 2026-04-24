@@ -255,14 +255,11 @@ button.theme-toggle.hidden {
    DARK MODE
    ========================================================================== */
 html[data-theme="dark"] {
-  /* --- base body --- */
-  background: #0f1115 !important;
+  /* base text color only — body background is owned by the atmospheric
+     starry-sky section above; do NOT re-set it here. */
   color: #d7d9df !important;
 
-  body {
-    background: #0f1115 !important;
-    color: #d7d9df !important;
-  }
+  body { color: #d7d9df !important; }
 
   /* Swap toggle icons */
   .greedy-nav button.theme-toggle,
