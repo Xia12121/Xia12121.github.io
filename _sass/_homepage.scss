@@ -5,6 +5,136 @@
 
 
 /* ==========================================================================
+   ATMOSPHERIC BACKGROUND (day + starry night)
+   ========================================================================== */
+
+/* Star-field generator — outputs box-shadow list with random positions */
+@function star-field($count, $range-x: 2000, $range-y: 1400, $color: #ffffff) {
+  $shadow: "#{random($range-x)}px #{random($range-y)}px #{$color}";
+  @for $i from 2 through $count {
+    $shadow: "#{$shadow}, #{random($range-x)}px #{random($range-y)}px #{$color}";
+  }
+  @return unquote($shadow);
+}
+
+$stars-small:  star-field(500, 2000, 1400, #ffffff);
+$stars-medium: star-field(150, 2000, 1400, #e8ecff);
+$stars-large:  star-field(40,  2000, 1400, #c9d7ff);
+
+@keyframes hp-twinkle {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1; }
+}
+@keyframes hp-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(0, -40px, 0); }
+}
+
+/* --- Day-mode canvas: clean paper-like with warm radial hints --- */
+body {
+  background:
+    radial-gradient(ellipse 900px 600px at 8% -5%,  rgba(132, 22, 23, 0.045), transparent 60%),
+    radial-gradient(ellipse 1100px 700px at 100% 100%, rgba(201, 107, 30, 0.055), transparent 60%),
+    linear-gradient(180deg, #fbfaf8 0%, #f6f3ee 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* --- Night-mode canvas: deep gradient + three layers of twinkling stars + nebula --- */
+html[data-theme="dark"] {
+  body {
+    background:
+      radial-gradient(ellipse at 50% 0%, #1c1f33 0%, #0a0c18 55%, #03040a 100%) !important;
+    background-attachment: fixed !important;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Small & medium stars via body pseudo-elements */
+  body::before,
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    pointer-events: none;
+    z-index: 0;
+  }
+  body::before {
+    box-shadow: #{$stars-small};
+    animation: hp-twinkle 4.5s ease-in-out infinite,
+               hp-drift 120s linear infinite alternate;
+  }
+  body::after {
+    box-shadow: #{$stars-medium};
+    animation: hp-twinkle 6.5s ease-in-out 1s infinite,
+               hp-drift 180s linear infinite alternate;
+  }
+
+  /* Large bright stars + nebula glow on html pseudo-elements */
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: #{$stars-large};
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    animation: hp-twinkle 3s ease-in-out infinite;
+  }
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 700px 400px at 18% 25%, rgba(138, 110, 210, 0.10), transparent 60%),
+      radial-gradient(ellipse 900px 500px at 82% 75%, rgba(90, 140, 210, 0.09), transparent 60%),
+      radial-gradient(ellipse 500px 300px at 60% 10%, rgba(245, 170, 100, 0.05), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Let the canvas show through main, sidebar, footer */
+  body,
+  #main,
+  .sidebar,
+  .page__footer { background: transparent !important; }
+
+  /* Sit content above the star layers */
+  .masthead,
+  #main,
+  .page__footer { position: relative; z-index: 1; }
+
+  /* Re-assert masthead bg on top of stars (slight translucency for glass feel) */
+  .masthead {
+    background: rgba(20, 24, 34, 0.85) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  }
+  .greedy-nav {
+    background: transparent !important;
+  }
+  .greedy-nav .visible-links li:first-child a,
+  .greedy-nav a { background: transparent !important; }
+
+  /* Footer subtle panel */
+  .page__footer {
+    background: rgba(5, 7, 16, 0.7) !important;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  }
+}
+
+
+/* ==========================================================================
    LANGUAGE SWITCHER (nav bar)
    ========================================================================== */
 .lang-switch {
