@@ -1,0 +1,416 @@
+/* ==========================================================================
+   HOMEPAGE & SIDEBAR CUSTOMIZATIONS
+   Scoped under .hp-* classes used in _pages/about.md and author-profile.html
+   ========================================================================== */
+
+/* ---------- Shared palette ---------- */
+.hp-author,
+.hp-hero,
+.hp-bio,
+.hp-interests,
+.hp-news,
+.hp-edu,
+.hp-cta,
+.hp-pub-group,
+.hp-section-title {
+  --ou-red: #841617;
+  --ou-orange: #c96b1e;
+}
+
+/* ---------- Homepage body ---------- */
+.hp-hero {
+  margin-top: 0.25em;
+  margin-bottom: 1.6em;
+
+  h1 {
+    font-size: 2em;
+    margin: 0 0 0.15em 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  .hp-sub {
+    font-size: 1.05em;
+    color: #666;
+    margin: 0;
+  }
+  .hp-accent {
+    display: inline-block;
+    width: 44px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #841617 0%, #c96b1e 100%);
+    margin: 0.7em 0 1em 0;
+  }
+}
+
+.hp-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: 1.25em;
+  font-weight: 700;
+  margin: 1.8em 0 0.75em 0;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid #e6e6e6;
+  color: #222;
+
+  .hp-ico { font-size: 1.1em; }
+}
+
+.hp-bio p { line-height: 1.7; margin: 0 0 0.9em 0; }
+
+/* ---------- Research Interests cards ---------- */
+.hp-interests {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8em;
+  margin: 0.6em 0 0 0;
+}
+.hp-card {
+  background: #fafafa;
+  border: 1px solid #ececec;
+  border-left: 3px solid #841617;
+  border-radius: 6px;
+  padding: 0.8em 0.95em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  }
+}
+.hp-card-title {
+  font-weight: 600;
+  font-size: 0.98em;
+  margin-bottom: 0.25em;
+  color: #222;
+}
+.hp-card-desc {
+  font-size: 0.88em;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ---------- News timeline ---------- */
+.hp-news {
+  margin: 0.5em 0 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding: 0.75em 0.95em 0.75em 1em;
+    margin-bottom: 0.6em;
+    background: #fafafa;
+    border-left: 3px solid #c96b1e;
+    border-radius: 0 6px 6px 0;
+    line-height: 1.55;
+    font-size: 0.95em;
+  }
+  .hp-date {
+    display: inline-block;
+    font-weight: 700;
+    color: #841617;
+    margin-right: 0.4em;
+    font-size: 0.88em;
+    letter-spacing: 0.2px;
+  }
+  .hp-badge {
+    display: inline-block;
+    background: #841617;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 0.12em 0.55em;
+    border-radius: 10px;
+    margin-right: 0.35em;
+    vertical-align: 2px;
+    letter-spacing: 0.4px;
+  }
+}
+
+/* ---------- Education ---------- */
+.hp-edu {
+  padding-left: 0;
+
+  li {
+    padding: 0.45em 0;
+    border-bottom: 1px dashed #ececec;
+    list-style: none;
+
+    &:last-child { border-bottom: none; }
+  }
+  .hp-edu-school { font-weight: 600; color: #222; }
+  .hp-edu-meta { color: #777; font-size: 0.88em; }
+}
+
+/* ---------- CTA card ---------- */
+.hp-cta {
+  margin-top: 1.5em;
+  padding: 1em 1.2em;
+  background: linear-gradient(135deg, #fff7ee 0%, #fdeee6 100%);
+  border-radius: 8px;
+  font-size: 0.98em;
+  color: #333;
+
+  a { font-weight: 600; }
+}
+
+/* ---------- Publications ---------- */
+.hp-pub-group { margin-bottom: 1.4em; }
+.hp-pub-group-title {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  margin: 1.1em 0 0.6em 0;
+  padding-left: 0.6em;
+  border-left: 3px solid #c96b1e;
+}
+.hp-pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: pubcounter;
+}
+.hp-pub {
+  position: relative;
+  counter-increment: pubcounter;
+  padding: 0.75em 0.95em 0.8em 2.6em;
+  margin-bottom: 0.55em;
+  background: #fafafa;
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  line-height: 1.55;
+  font-size: 0.93em;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+
+  &::before {
+    content: counter(pubcounter);
+    position: absolute;
+    left: 0.7em;
+    top: 0.85em;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 0.75em;
+    font-weight: 700;
+    color: #fff;
+    background: #841617;
+    border-radius: 50%;
+  }
+  &:hover {
+    border-color: #c96b1e;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    transform: translateY(-1px);
+  }
+}
+.hp-pub-authors {
+  color: #555;
+  font-size: 0.88em;
+  margin-bottom: 0.25em;
+
+  strong { color: #841617; }
+}
+.hp-pub-title {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.35em;
+  line-height: 1.45;
+}
+.hp-pub-venue {
+  font-size: 0.85em;
+  color: #666;
+  font-style: italic;
+}
+.hp-pub-badge {
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 700;
+  padding: 0.14em 0.6em;
+  border-radius: 10px;
+  margin-right: 0.3em;
+  vertical-align: 1px;
+  letter-spacing: 0.5px;
+  font-style: normal;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.hp-pub-badge-review   { background: #e3e3e3; color: #555; }
+.hp-pub-badge-ccfb     { background: #841617; color: #fff; }
+.hp-pub-badge-ccfc     { background: #c96b1e; color: #fff; }
+.hp-pub-badge-ei       { background: #4a6b8a; color: #fff; }
+.hp-pub-badge-patent   { background: #b8860b; color: #fff; }
+.hp-pub-badge-arxiv    { background: #6a4c93; color: #fff; }
+.hp-pub-badge-accepted { background: #2e8b57; color: #fff; }
+
+
+/* ==========================================================================
+   SIDEBAR AUTHOR PROFILE REDESIGN
+   ========================================================================== */
+
+.hp-author {
+  .author__avatar {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 0.4em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 188px;
+      height: 188px;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, #841617, #c96b1e, #841617);
+      filter: blur(14px);
+      opacity: 0;
+      transition: opacity 0.45s ease;
+      z-index: 0;
+      pointer-events: none;
+    }
+    &:hover::before { opacity: 0.55; }
+
+    img {
+      position: relative;
+      z-index: 1;
+      max-width: 180px;
+      width: 100%;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, #841617 0%, #c96b1e 100%);
+      box-shadow: 0 4px 16px rgba(132, 22, 23, 0.18);
+      transition: transform 0.35s cubic-bezier(.2,.9,.3,1.2), box-shadow 0.35s ease;
+
+      &:hover {
+        transform: scale(1.04) rotate(-1.5deg);
+        box-shadow: 0 10px 28px rgba(132, 22, 23, 0.32);
+      }
+    }
+  }
+
+  .author__content { text-align: center; padding: 0 0.3em; }
+
+  .author__name {
+    display: inline-block;
+    font-size: 1.4em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 0.6em 0 0.25em 0;
+    background: linear-gradient(135deg, #841617 0%, #c96b1e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .author__pronouns {
+    display: inline-block;
+    font-size: 0.7em;
+    padding: 0.2em 0.75em;
+    background: #f2f2f2;
+    color: #777;
+    border-radius: 12px;
+    margin: 0 auto 0.7em auto;
+    text-transform: lowercase;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+  }
+
+  .author__bio {
+    font-size: 0.85em;
+    color: #555;
+    line-height: 1.55;
+    padding: 0 0.4em;
+    margin: 0 auto 0.9em auto;
+    font-style: italic;
+  }
+
+  /* Hide the unused Follow button */
+  .btn--inverse { display: none !important; }
+
+  .author__urls-wrapper { width: 100%; }
+
+  .author__urls {
+    padding: 0.3em 0 0 0 !important;
+    margin: 0.4em 0 0 0 !important;
+    list-style: none;
+    border-top: 1px solid #ececec;
+
+    li {
+      margin: 0 0 0.15em 0 !important;
+      padding: 0 !important;
+      font-size: 0.88em;
+      border-radius: 6px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.22s ease, transform 0.22s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(180deg, #841617, #c96b1e);
+        transform: scaleY(0);
+        transform-origin: center;
+        transition: transform 0.25s ease;
+        border-radius: 2px;
+      }
+      &:hover {
+        background: linear-gradient(90deg, rgba(132,22,23,0.07) 0%, rgba(201,107,30,0.02) 100%);
+        transform: translateX(4px);
+      }
+      &:hover::before { transform: scaleY(0.65); }
+
+      a,
+      &.author__desktop {
+        display: block;
+        padding: 0.55em 0.7em 0.55em 0.85em;
+        color: #444 !important;
+        text-decoration: none !important;
+        line-height: 1.35;
+      }
+      a:hover { color: #841617 !important; }
+
+      i {
+        color: #999;
+        margin-right: 0.55em;
+        width: 1.2em;
+        text-align: center;
+        transition: color 0.22s ease, transform 0.22s ease;
+      }
+      &:hover i {
+        color: #841617;
+        transform: scale(1.18);
+      }
+
+      /* Info rows (location / employer): non-clickable, muted */
+      &.author__desktop {
+        color: #666 !important;
+        cursor: default;
+
+        &:hover {
+          transform: none;
+          background: transparent;
+
+          &::before { transform: scaleY(0); }
+          i { color: #999; transform: none; }
+        }
+      }
+    }
+
+    /* Divider between last info row and first link row */
+    li.author__desktop + li:not(.author__desktop) {
+      margin-top: 0.4em !important;
+      padding-top: 0.2em;
+      border-top: 1px dashed #eaeaea;
+    }
+  }
+}
