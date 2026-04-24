@@ -1,5 +1,8 @@
 {% include base_path %}
 
+{% assign is_zh = false %}
+{% if page.lang == "zh" or page.url contains "/zh" %}{% assign is_zh = true %}{% endif %}
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -17,6 +20,11 @@
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <a href="{{ base_path }}/" class="lang-switch__option {% unless is_zh %}is-active{% endunless %}" aria-label="English">EN</a>
+          <a href="{{ base_path }}/zh/" class="lang-switch__option {% if is_zh %}is-active{% endif %}" aria-label="中文" lang="zh">中</a>
+        </div>
       </nav>
     </div>
   </div>
