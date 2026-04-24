@@ -491,39 +491,117 @@ html[data-theme="dark"] {
     font-size: 0.92em;
   }
 
-  /* --- Sidebar: full-width stacked above content --- */
+  /* --- Sidebar: FULL rewrite for mobile --- */
+  /* The theme lays sidebar children out as table-cells (avatar | content | urls)
+     and renders .author__urls as an absolute-positioned popup anchored to a
+     "Follow" button. Force a vertical, centered block layout instead. */
+  .sidebar,
   .hp-author {
-    .author__avatar img { max-width: 130px; padding: 3px; }
-    .author__avatar::before { width: 138px; height: 138px; }
-    .author__name { font-size: 1.2em; }
-    .author__bio { font-size: 0.82em; padding: 0 1em; }
-    .author__urls {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.15em 0.3em;
-      border-top: 1px solid #ececec;
-      padding-top: 0.6em !important;
-      max-width: 520px;
-      margin: 0.6em auto 0 auto !important;
+    display: block !important;
+    margin: 0.5em auto 1.2em auto !important;
+    padding: 0 !important;
+    text-align: center;
+
+    /* Force block layout on every row that the theme made table-cell */
+    .author__avatar,
+    .author__content,
+    .author__urls-wrapper {
+      display: block !important;
+      width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      text-align: center !important;
+    }
+
+    .author__avatar { margin-bottom: 0.6em !important; }
+    .author__avatar img {
+      display: block !important;
+      max-width: 130px !important;
+      width: 130px !important;
+      margin: 0 auto !important;
+      padding: 3px !important;
+      border: none !important;
+    }
+    .author__avatar::before { width: 138px !important; height: 138px !important; }
+
+    .author__name {
+      display: inline-block !important;
+      font-size: 1.2em !important;
+      margin: 0.25em auto 0.2em auto !important;
+      white-space: nowrap;
+    }
+    .author__pronouns {
+      display: inline-block !important;
+      margin: 0 auto 0.55em auto !important;
+    }
+    .author__bio {
+      display: block !important;
+      font-size: 0.88em !important;
+      padding: 0 1em !important;
+      margin: 0 auto 0.85em auto !important;
+    }
+
+    /* Kill the Follow button AND its popup arrows decisively */
+    .author__urls-wrapper button.btn { display: none !important; }
+    .author__urls-wrapper button.btn--inverse { display: none !important; }
+    .author__urls::before,
+    .author__urls::after { display: none !important; }
+
+    /* URLs: flat centered wrapping row, NOT a popup */
+    .author__urls,
+    .author__urls-wrapper .author__urls {
+      display: flex !important;
+      visibility: visible !important;
+      position: static !important;
+      right: auto !important;
+      top: auto !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 0.15em 0.25em !important;
+      max-width: 540px;
+      margin: 0.4em auto 0 auto !important;
+      padding: 0.6em 0 0 0 !important;
+      border: none !important;
+      border-top: 1px solid #ececec !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      z-index: auto !important;
 
       li {
-        flex: 0 1 auto;
+        flex: 0 1 auto !important;
+        white-space: nowrap;
+        margin: 0 !important;
         font-size: 0.82em;
 
-        a, &.author__desktop { padding: 0.4em 0.6em; }
+        a,
+        &.author__desktop {
+          display: inline-flex !important;
+          align-items: center;
+          padding: 0.35em 0.55em !important;
+        }
+
+        /* Kill hover slide + gradient bar in horizontal layout */
+        &:hover { transform: none !important; background: transparent !important; }
+        &::before { display: none !important; }
       }
-      /* No dashed divider when arranged horizontally */
+      /* No dashed divider in horizontal row */
       li.author__desktop + li:not(.author__desktop) {
-        border-top: none;
-        padding-top: 0;
+        border-top: none !important;
+        padding-top: 0 !important;
         margin-top: 0 !important;
       }
-      /* Kill the slide-right hover effect in horizontal layout */
-      li:hover { transform: none; }
-      li::before { display: none; }
     }
+
+    /* Show Norman OK / OU employer rows on mobile (theme hides them < 1024px) */
+    .author__desktop { display: inline-flex !important; }
   }
+}
+
+/* Dark-mode popup bg override (in case any residual popup styling leaks) */
+html[data-theme="dark"] .sidebar .author__urls {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 
