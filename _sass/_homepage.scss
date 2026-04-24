@@ -100,11 +100,10 @@ html[data-theme="dark"] {
     z-index: 0;
   }
 
-  /* Let the canvas show through main, sidebar, footer */
-  body,
+  /* Let the starry canvas show through main & sidebar
+     (DO NOT include `body` here — that's where the starry gradient lives). */
   #main,
-  .sidebar,
-  .page__footer { background: transparent !important; }
+  .sidebar { background: transparent !important; }
 
   /* Sit content above the star layers */
   .masthead,
