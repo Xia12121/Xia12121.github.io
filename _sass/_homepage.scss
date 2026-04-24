@@ -105,8 +105,9 @@ html[data-theme="dark"] {
   #main,
   .sidebar { background: transparent !important; }
 
-  /* Sit content above the star layers */
-  .masthead,
+  /* Sit content above the star layers.
+     Do NOT touch .masthead's positioning — theme sets it `position: fixed;
+     top: 0` and overriding that unsticks it from the viewport top. */
   #main,
   .page__footer { position: relative; z-index: 1; }
 
