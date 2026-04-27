@@ -157,28 +157,39 @@
       animId = requestAnimationFrame(loop);
     }
 
-    function bind() {
-      var avatar = document.querySelector('.hp-author .author__avatar img');
-      if (!avatar) return false;
-      if (avatar.dataset.fwBound) return true;
-      avatar.dataset.fwBound = '1';
-      avatar.style.cursor = 'pointer';
-      avatar.setAttribute('title', 'Click me 🎆');
-      avatar.addEventListener('click', function(e) {
-        var rect = avatar.getBoundingClientRect();
-        var cx = rect.left + rect.width / 2;
-        // burst of 3 staggered fireworks
-        launchFirework(cx);
-        setTimeout(function() { launchFirework(cx + rand(-160, 160)); }, 180);
-        setTimeout(function() { launchFirework(cx + rand(-220, 220)); }, 360);
-      });
-      return true;
+    /* Cosmetic hint on the avatar so visitors know it's interactive */
+    function decorateAvatar() {
+      var img = document.querySelector('.hp-author .author__avatar img');
+      if (!img) return;
+      img.style.cursor = 'pointer';
+      if (!img.getAttribute('title')) img.setAttribute('title', 'Click me 🎆');
     }
 
+    /* Event delegation — works regardless of when the sidebar lands in DOM,
+       and accepts clicks on either the <img> or the wrapping <div>. */
+    document.addEventListener('click', function(e) {
+      var t = e.target;
+      var hit = null;
+      while (t && t !== document.body) {
+        if (t.classList && t.classList.contains('author__avatar')) { hit = t; break; }
+        t = t.parentNode;
+      }
+      if (!hit) return;
+      /* must be inside the .hp-author wrapper to count */
+      var inSidebar = hit.closest && hit.closest('.hp-author');
+      if (!inSidebar) return;
+
+      var rect = hit.getBoundingClientRect();
+      var cx = rect.left + rect.width / 2;
+      launchFirework(cx);
+      setTimeout(function() { launchFirework(cx + rand(-160, 160)); }, 180);
+      setTimeout(function() { launchFirework(cx + rand(-220, 220)); }, 360);
+    }, false);
+
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', bind);
+      document.addEventListener('DOMContentLoaded', decorateAvatar);
     } else {
-      bind();
+      decorateAvatar();
     }
   })();
 </script>
