@@ -16,58 +16,62 @@ layout: single
 
 </div>
 
-<div class="tetris-app">
-  <div class="tetris-side tetris-side--left">
-    <div class="tetris-stat">
-      <span class="tetris-stat__label">Score</span>
-      <span class="tetris-stat__value" id="t-score">0</span>
+<div class="tetris-arena">
+  <div class="tetris-grid">
+    <div class="tetris-col tetris-col--left">
+      <div class="tetris-stat">
+        <span class="tetris-stat__label">Score</span>
+        <span class="tetris-stat__value" id="t-score">0</span>
+      </div>
+      <div class="tetris-stat">
+        <span class="tetris-stat__label">Lines</span>
+        <span class="tetris-stat__value" id="t-lines">0</span>
+      </div>
+      <div class="tetris-stat">
+        <span class="tetris-stat__label">Level</span>
+        <span class="tetris-stat__value" id="t-level">1</span>
+      </div>
+      <div class="tetris-stat tetris-stat--best">
+        <span class="tetris-stat__label">Best</span>
+        <span class="tetris-stat__value" id="t-best">0</span>
+      </div>
     </div>
-    <div class="tetris-stat">
-      <span class="tetris-stat__label">Lines</span>
-      <span class="tetris-stat__value" id="t-lines">0</span>
+
+    <div class="tetris-col tetris-col--center">
+      <div class="tetris-board-wrap">
+        <canvas id="t-board" width="280" height="560" aria-label="Tetris board"></canvas>
+        <div class="tetris-overlay" id="t-overlay">
+          <div class="tetris-overlay__title" id="t-overlay-title">Tetris</div>
+          <div class="tetris-overlay__msg" id="t-overlay-msg">Press <kbd>Space</kbd> or tap Start</div>
+          <button class="tetris-btn" id="t-start" type="button">Start</button>
+        </div>
+      </div>
     </div>
-    <div class="tetris-stat">
-      <span class="tetris-stat__label">Level</span>
-      <span class="tetris-stat__value" id="t-level">1</span>
-    </div>
-    <div class="tetris-stat tetris-stat--best">
-      <span class="tetris-stat__label">Best</span>
-      <span class="tetris-stat__value" id="t-best">0</span>
+
+    <div class="tetris-col tetris-col--right">
+      <div class="tetris-next">
+        <span class="tetris-next__label">Next</span>
+        <canvas id="t-next" width="112" height="112"></canvas>
+      </div>
+      <div class="tetris-next">
+        <span class="tetris-next__label">Hold</span>
+        <canvas id="t-hold" width="112" height="112"></canvas>
+      </div>
+      <button class="tetris-btn tetris-btn--ghost" id="t-pause" type="button">Pause</button>
+      <button class="tetris-btn tetris-btn--ghost" id="t-restart" type="button">Restart</button>
     </div>
   </div>
 
-  <div class="tetris-board-wrap">
-    <canvas id="t-board" width="280" height="560" aria-label="Tetris board"></canvas>
-    <div class="tetris-overlay" id="t-overlay">
-      <div class="tetris-overlay__title" id="t-overlay-title">Tetris</div>
-      <div class="tetris-overlay__msg" id="t-overlay-msg">Press <kbd>Space</kbd> or tap Start</div>
-      <button class="tetris-btn" id="t-start" type="button">Start</button>
-    </div>
-  </div>
-
-  <div class="tetris-side tetris-side--right">
-    <div class="tetris-next">
-      <span class="tetris-next__label">Next</span>
-      <canvas id="t-next" width="112" height="112"></canvas>
-    </div>
-    <div class="tetris-next">
-      <span class="tetris-next__label">Hold (C)</span>
-      <canvas id="t-hold" width="112" height="112"></canvas>
-    </div>
-    <button class="tetris-btn tetris-btn--ghost" id="t-pause" type="button">Pause</button>
-    <button class="tetris-btn tetris-btn--ghost" id="t-restart" type="button">Restart</button>
+  <div class="tetris-touch-pad" aria-hidden="false">
+    <button class="tetris-touch" data-action="left"   type="button" aria-label="Move left">◀</button>
+    <button class="tetris-touch" data-action="rotate" type="button" aria-label="Rotate">↻</button>
+    <button class="tetris-touch" data-action="right"  type="button" aria-label="Move right">▶</button>
+    <button class="tetris-touch" data-action="soft"   type="button" aria-label="Soft drop">▼</button>
+    <button class="tetris-touch" data-action="hard"   type="button" aria-label="Hard drop">⏬</button>
   </div>
 </div>
 
-<div class="tetris-touch-pad" aria-hidden="false">
-  <button class="tetris-touch" data-action="left"  type="button" aria-label="Move left">◀</button>
-  <button class="tetris-touch" data-action="rotate" type="button" aria-label="Rotate">↻</button>
-  <button class="tetris-touch" data-action="right" type="button" aria-label="Move right">▶</button>
-  <button class="tetris-touch" data-action="soft"  type="button" aria-label="Soft drop">▼</button>
-  <button class="tetris-touch" data-action="hard"  type="button" aria-label="Hard drop">⏬</button>
-</div>
-
-<p class="tetris-hint">Tip: collect 4 lines at once for a Tetris (800 pts). Game speeds up every 10 lines.</p>
+<p class="tetris-hint">Tip: collect 4 lines at once for a Tetris (800 pts). Game speeds up every 10 lines. Press <kbd>C</kbd> to hold a piece.</p>
 
 <script>
 (function(){
