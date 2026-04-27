@@ -14,4 +14,172 @@
     });
   })();
 </script>
+
+<!-- Avatar fireworks effect -->
+<script>
+  (function() {
+    var canvas = null, ctx = null, dpr = 1;
+    var rockets = [], particles = [];
+    var animId = null;
+    var GRAVITY = 0.045;
+    var COLORS = [
+      '#ff6b6b', '#ffd93d', '#6bcf7f', '#4d96ff',
+      '#ff8c69', '#c084fc', '#ffd580', '#ff9b5e',
+      '#ff5ea1', '#5eecff', '#ffffff'
+    ];
+
+    function rand(a, b) { return a + Math.random() * (b - a); }
+
+    function ensureCanvas() {
+      if (canvas) return;
+      canvas = document.createElement('canvas');
+      canvas.id = 'fireworks-canvas';
+      canvas.setAttribute('aria-hidden', 'true');
+      canvas.style.cssText =
+        'position:fixed;top:0;left:0;width:100vw;height:100vh;' +
+        'pointer-events:none;z-index:9999;';
+      document.body.appendChild(canvas);
+      ctx = canvas.getContext('2d');
+      resize();
+      window.addEventListener('resize', resize);
+    }
+
+    function resize() {
+      if (!canvas) return;
+      dpr = window.devicePixelRatio || 1;
+      var w = window.innerWidth, h = window.innerHeight;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.scale(dpr, dpr);
+    }
+
+    function explode(x, y) {
+      var n = 70 + Math.floor(Math.random() * 40);
+      var primary = COLORS[Math.floor(Math.random() * COLORS.length)];
+      for (var i = 0; i < n; i++) {
+        var angle = Math.random() * Math.PI * 2;
+        var speed = rand(1.2, 5.2);
+        // 65% chance to use the firework's primary color, 35% chance any color
+        var color = Math.random() < 0.65 ? primary
+          : COLORS[Math.floor(Math.random() * COLORS.length)];
+        particles.push({
+          x: x, y: y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          life: 1,
+          decay: rand(0.008, 0.018),
+          color: color,
+          size: rand(1.6, 3.2)
+        });
+      }
+    }
+
+    function launchFirework(originX) {
+      ensureCanvas();
+      var w = window.innerWidth, h = window.innerHeight;
+      var sx = (originX == null) ? w / 2 : originX;
+      sx = Math.max(40, Math.min(w - 40, sx));
+      var sy = h + 10;
+      var tx = sx + rand(-w * 0.2, w * 0.2);
+      var ty = rand(h * 0.12, h * 0.45);
+      var frames = 55 + Math.floor(Math.random() * 20);
+      rockets.push({
+        x: sx, y: sy, tx: tx, ty: ty,
+        vx: (tx - sx) / frames,
+        vy: (ty - sy) / frames,
+        color: COLORS[Math.floor(Math.random() * COLORS.length)],
+        trail: []
+      });
+      if (animId == null) animId = requestAnimationFrame(loop);
+    }
+
+    function loop() {
+      var w = window.innerWidth, h = window.innerHeight;
+      // fade trail effect
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.18)';
+      ctx.fillRect(0, 0, w, h);
+      ctx.globalCompositeOperation = 'lighter';
+
+      // rockets
+      for (var i = rockets.length - 1; i >= 0; i--) {
+        var r = rockets[i];
+        r.x += r.vx;
+        r.y += r.vy;
+        ctx.fillStyle = r.color;
+        ctx.beginPath();
+        ctx.arc(r.x, r.y, 2.2, 0, Math.PI * 2);
+        ctx.fill();
+        // trail
+        ctx.strokeStyle = r.color;
+        ctx.lineWidth = 1.6;
+        ctx.beginPath();
+        ctx.moveTo(r.x, r.y);
+        ctx.lineTo(r.x - r.vx * 4, r.y - r.vy * 4);
+        ctx.stroke();
+
+        if (r.y <= r.ty) {
+          explode(r.x, r.y);
+          rockets.splice(i, 1);
+        }
+      }
+
+      // particles
+      for (var j = particles.length - 1; j >= 0; j--) {
+        var p = particles[j];
+        p.vy += GRAVITY;
+        p.vx *= 0.99;
+        p.vy *= 0.99;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.life -= p.decay;
+        if (p.life <= 0) { particles.splice(j, 1); continue; }
+        ctx.globalAlpha = Math.max(0, p.life);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size * (0.5 + p.life * 0.5), 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+
+      if (rockets.length === 0 && particles.length === 0) {
+        // a few extra frames so the trail fully fades, then stop
+        ctx.globalCompositeOperation = 'destination-out';
+        ctx.fillStyle = 'rgba(0, 0, 0, 1)';
+        ctx.fillRect(0, 0, w, h);
+        ctx.globalCompositeOperation = 'source-over';
+        animId = null;
+        return;
+      }
+      animId = requestAnimationFrame(loop);
+    }
+
+    function bind() {
+      var avatar = document.querySelector('.hp-author .author__avatar img');
+      if (!avatar) return false;
+      if (avatar.dataset.fwBound) return true;
+      avatar.dataset.fwBound = '1';
+      avatar.style.cursor = 'pointer';
+      avatar.setAttribute('title', 'Click me 🎆');
+      avatar.addEventListener('click', function(e) {
+        var rect = avatar.getBoundingClientRect();
+        var cx = rect.left + rect.width / 2;
+        // burst of 3 staggered fireworks
+        launchFirework(cx);
+        setTimeout(function() { launchFirework(cx + rand(-160, 160)); }, 180);
+        setTimeout(function() { launchFirework(cx + rand(-220, 220)); }, 360);
+      });
+      return true;
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bind);
+    } else {
+      bind();
+    }
+  })();
+</script>
 <!-- end custom footer snippets -->
