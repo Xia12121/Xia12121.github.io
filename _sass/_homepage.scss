@@ -913,6 +913,28 @@ html[data-theme="dark"] .sidebar .author__urls {
   color: #222;
   margin-bottom: 0.35em;
   line-height: 1.45;
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+    background-image: linear-gradient(90deg, #841617, #c96b1e);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1.5px;
+    transition: background-size 0.3s ease, color 0.2s ease;
+
+    &:hover, &:focus {
+      color: #841617 !important;
+      background-size: 100% 1.5px;
+      outline: none;
+    }
+  }
+}
+html[data-theme="dark"] .hp-pub-title a:hover,
+html[data-theme="dark"] .hp-pub-title a:focus {
+  color: #ff9b5e !important;
+  background-image: linear-gradient(90deg, #ff9b5e, #ffd580);
 }
 .hp-pub-venue {
   font-size: 0.85em;

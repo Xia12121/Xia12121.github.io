@@ -78,7 +78,7 @@ lang: zh
     </li>
     <li class="hp-pub">
       <div class="hp-pub-authors"><strong>Linhan Xia</strong>, Yicheng Yang, Ziou Chen, Zheng Yang, Shengxin Zhu*</div>
-      <div class="hp-pub-title">Movie Recommendation with Poster Attention via Multi-modal Transformer Feature Fusion</div>
+      <div class="hp-pub-title"><a href="https://arxiv.org/abs/2407.09157" target="_blank" rel="noopener">Movie Recommendation with Poster Attention via Multi-modal Transformer Feature Fusion</a></div>
       <div class="hp-pub-venue"><span class="hp-pub-badge hp-pub-badge-arxiv">arXiv 预印本</span></div>
     </li>
   </ol>
@@ -89,7 +89,7 @@ lang: zh
   <ol class="hp-pub-list">
     <li class="hp-pub">
       <div class="hp-pub-authors"><strong>Linhan Xia</strong>, Mingzhan Yang, Jingjing Wang, Ziwei Yan, Yakun Ren, Guo Yu, Kai Lei*</div>
-      <div class="hp-pub-title">Mamba4Net: Distilled Hybrid Mamba Large Language Models for Networking</div>
+      <div class="hp-pub-title"><a href="https://ieeexplore.ieee.org/document/11192368/" target="_blank" rel="noopener">Mamba4Net: Distilled Hybrid Mamba Large Language Models for Networking</a></div>
       <div class="hp-pub-venue">
         <span class="hp-pub-badge hp-pub-badge-ccfb">CCF-B</span>
         <span class="hp-pub-badge hp-pub-badge-ei">EI</span>
@@ -98,7 +98,7 @@ lang: zh
     </li>
     <li class="hp-pub">
       <div class="hp-pub-authors"><strong>Linhan Xia</strong>, Guohui Yuan, Shengnan Tao, Yujing Qiu, Guo Yu, Kai Lei*</div>
-      <div class="hp-pub-title">Fine-tuned Poly Encoders for Word Sense Disambiguation</div>
+      <div class="hp-pub-title"><a href="https://link.springer.com/chapter/10.1007/978-981-95-3058-8_41" target="_blank" rel="noopener">Fine-tuned Poly Encoders for Word Sense Disambiguation</a></div>
       <div class="hp-pub-venue">
         <span class="hp-pub-badge hp-pub-badge-ccfc">CCF-C</span>
         第 18 届国际知识科学、工程与管理会议 (KSEM 2025)
@@ -106,7 +106,7 @@ lang: zh
     </li>
     <li class="hp-pub">
       <div class="hp-pub-authors"><strong>Linhan Xia</strong>, Jiaxin Cai, Ricky Yuen-Tan Hou*, Seon-Phil Jeong</div>
-      <div class="hp-pub-title">Quantification and Validation for Degree of Understanding in M2M Semantic Communications</div>
+      <div class="hp-pub-title"><a href="https://doi.org/10.1109/ICCT62411.2024.10946387" target="_blank" rel="noopener">Quantification and Validation for Degree of Understanding in M2M Semantic Communications</a></div>
       <div class="hp-pub-venue">
         <span class="hp-pub-badge hp-pub-badge-ei">EI</span>
         第 24 届国际通信技术会议 (ICCT)
@@ -114,7 +114,7 @@ lang: zh
     </li>
     <li class="hp-pub">
       <div class="hp-pub-authors"><strong>Linhan Xia*</strong>, Junbang Liu, Tong Wu</div>
-      <div class="hp-pub-title">Depth Estimation Algorithm Based on Transformer-Encoder and Feature Fusion</div>
+      <div class="hp-pub-title"><a href="https://ieeexplore.ieee.org/document/10548595/" target="_blank" rel="noopener">Depth Estimation Algorithm Based on Transformer-Encoder and Feature Fusion</a></div>
       <div class="hp-pub-venue">
         <span class="hp-pub-badge hp-pub-badge-ei">EI</span>
         第 7 届国际先进算法与控制工程会议 (AACE)
@@ -122,7 +122,7 @@ lang: zh
     </li>
     <li class="hp-pub">
       <div class="hp-pub-authors"><strong>Linhan Xia*</strong>, Jinyuan Zhang, Bohan Wen</div>
-      <div class="hp-pub-title">Optimization Decision Model of Vegetable Stock and Pricing Based on TCN-Attention and Genetic Algorithm</div>
+      <div class="hp-pub-title"><a href="https://doi.org/10.1145/3644523.3644657" target="_blank" rel="noopener">Optimization Decision Model of Vegetable Stock and Pricing Based on TCN-Attention and Genetic Algorithm</a></div>
       <div class="hp-pub-venue">
         <span class="hp-pub-badge hp-pub-badge-ei">EI</span>
         第 4 届国际计算机科学与管理技术会议 (ICCSMT)
@@ -130,7 +130,7 @@ lang: zh
     </li>
     <li class="hp-pub">
       <div class="hp-pub-authors"><strong>Linhan Xia*</strong></div>
-      <div class="hp-pub-title">Chinese Financial Comments Sentiment Detection Based on the Bert-TCN Model with HowNet Disambiguation</div>
+      <div class="hp-pub-title"><a href="https://doi.org/10.2991/978-94-6463-304-7_18" target="_blank" rel="noopener">Chinese Financial Comments Sentiment Detection Based on the Bert-TCN Model with HowNet Disambiguation</a></div>
       <div class="hp-pub-venue">
         <span class="hp-pub-badge hp-pub-badge-ei">EI</span>
         第 3 届国际数字经济与计算机应用会议 (ICDECA)
@@ -144,7 +144,7 @@ lang: zh
   <ol class="hp-pub-list">
     <li class="hp-pub">
       <div class="hp-pub-authors">Kai Lei, Jie Jiang, <strong>Linhan Xia</strong>, Xianneng Zou, Chenghao Ma, Shikun Zhang, Bing Cui, Ziwei Yan, Haiyang Zheng</div>
-      <div class="hp-pub-title">基于跨架构知识蒸馏的网络任务模型构建方法</div>
+      <div class="hp-pub-title"><a href="https://patents.google.com/patent/CN121396808A/" target="_blank" rel="noopener">基于跨架构知识蒸馏的网络任务模型构建方法</a></div>
       <div class="hp-pub-venue">
         <span class="hp-pub-badge hp-pub-badge-patent">专利</span>
         中国专利号 CN121396808A
