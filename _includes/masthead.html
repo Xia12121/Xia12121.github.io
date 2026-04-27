@@ -3,6 +3,20 @@
 {% assign is_zh = false %}
 {% if page.lang == "zh" or page.url contains "/zh" %}{% assign is_zh = true %}{% endif %}
 
+{% comment %} Build the matching EN / ZH URL for the language switcher. {% endcomment %}
+{% if is_zh %}
+  {% assign en_url = page.url | remove_first: "/zh" %}
+  {% if en_url == "" or en_url == "/" %}{% assign en_url = "/" %}{% endif %}
+  {% assign zh_url = page.url %}
+{% else %}
+  {% assign en_url = page.url %}
+  {% if page.url == "/" %}
+    {% assign zh_url = "/zh/" %}
+  {% else %}
+    {% assign zh_url = page.url | prepend: "/zh" %}
+  {% endif %}
+{% endif %}
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -13,10 +27,21 @@
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
-              {% else %}
+              {% assign nav_href = link.url %}
+            {% else %}
               {% assign domain = base_path %}
+              {% if is_zh %}
+                {% assign nav_href = link.url | prepend: "/zh" %}
+              {% else %}
+                {% assign nav_href = link.url %}
+              {% endif %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            {% if is_zh and link.title_zh %}
+              {% assign nav_label = link.title_zh %}
+            {% else %}
+              {% assign nav_label = link.title %}
+            {% endif %}
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ nav_href }}">{{ nav_label }}</a></li>
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -36,8 +61,8 @@
         </button>
 
         <div class="lang-switch" role="group" aria-label="Language switcher">
-          <a href="{{ base_path }}/" class="lang-switch__option {% unless is_zh %}is-active{% endunless %}" aria-label="English">EN</a>
-          <a href="{{ base_path }}/zh/" class="lang-switch__option {% if is_zh %}is-active{% endif %}" aria-label="中文" lang="zh">中</a>
+          <a href="{{ base_path }}{{ en_url }}" class="lang-switch__option {% unless is_zh %}is-active{% endunless %}" aria-label="English">EN</a>
+          <a href="{{ base_path }}{{ zh_url }}" class="lang-switch__option {% if is_zh %}is-active{% endif %}" aria-label="中文" lang="zh">中</a>
         </div>
       </nav>
     </div>

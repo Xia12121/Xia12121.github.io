@@ -6,4 +6,5 @@
 
 main:
   - title: "Play"
+    title_zh: "游戏"
     url: /play/
