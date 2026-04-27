@@ -198,7 +198,7 @@ html[data-theme="dark"] {
 
 /* Prevent overlap with the last nav link */
 .masthead .greedy-nav .visible-links {
-  padding-right: 10.5rem;
+  padding-right: 11.5rem;
 }
 
 
@@ -210,7 +210,7 @@ html[data-theme="dark"] {
 button.theme-toggle,
 button.theme-toggle.hidden {
   position: absolute !important;
-  right: 5.2rem !important;
+  right: 6.4rem !important;
   top: 50% !important;
   transform: translateY(-50%) !important;
   width: 34px !important;
@@ -631,17 +631,17 @@ html[data-theme="dark"] .sidebar .author__urls {
     }
   }
 
-  /* Theme toggle — smaller, snug against lang switcher */
+  /* Theme toggle — smaller, with breathing room from lang switcher */
   .greedy-nav button.theme-toggle,
   button.theme-toggle,
   button.theme-toggle.hidden {
-    right: 5.2rem !important;
+    right: 6rem !important;
     width: 28px !important;
     height: 28px !important;
 
     svg { width: 13px; height: 13px; }
   }
-  .masthead .greedy-nav .visible-links { padding-right: 8.5rem; }
+  .masthead .greedy-nav .visible-links { padding-right: 9.5rem; }
 
   /* Hero */
   .hp-hero h1 { font-size: 1.35em !important; }
