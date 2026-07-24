@@ -53,7 +53,7 @@ lang: zh
   <li>
     <span class="hp-date">2026 年 4 月</span>
     <span class="hp-badge">已录用</span>
-    🎉 我们的论文 <strong>"Continuous-Time Modeling of Crypto Limit Order Books with Liquid Neural Networks"</strong>（论文编号&nbsp;#384）已被 <strong>International Workshop on AI in Networks and Distributed Systems（WAIN 2026）</strong>接收。感谢程序委员会和所有合作者！
+    🎉 我们的论文 <strong>"Continuous-Time Modeling of Crypto Limit Order Books with Liquid Neural Networks"</strong>（论文编号&nbsp;#384）已被 <strong>Asia Pacific Web and Web-Age Information Management Joint International Conference on Web and Big Data（APWeb-WAIM 2026）</strong>（<strong>CCF-C</strong>）接收。感谢程序委员会和所有合作者！
   </li>
 </ul>
 
