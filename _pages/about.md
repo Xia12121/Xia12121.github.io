@@ -21,7 +21,7 @@ redirect_from:
 
 <div class="hp-bio" markdown="1">
 
-I'm **Linhan Xia** (夏霖翰) — you can also call me **Chris**. I was born and raised in the People's Republic of China, and I received my bachelor's degree from **Hong Kong Baptist University**. I am currently pursuing a Ph.D. at the **University of Oklahoma**, where my work centers on model-assisted CAD generation.
+I'm **Linhan Xia** (夏霖翰) — you can also call me **Chris**. I was born and raised in the People's Republic of China, and I received my bachelor's degree from **Hong Kong Baptist University**. I am currently pursuing a Ph.D. at the **University of Oklahoma**, where my work centers on model-assisted CAD generation, supervised by **[Dr. Yifu Li](https://www.ou.edu/coe/ise/people/faculty/yifu-li)** and **[Dr. Rui Zhu](https://www.ou.edu/coe/ise/people/faculty/rui-zhu)**.
 
 Before joining OU, I was a research assistant at **ICNLab, Peking University Shenzhen Graduate School**, working with Prof. [Kai Lei](https://www.researchgate.net/profile/Kai-Lei/2). During my undergraduate years, I worked as a research assistant at **Beijing Normal University–Hong Kong Baptist University United International College (UIC)** under the supervision of Prof. [Ricky Yuen-tan Hou](https://staff.uic.edu.cn/rickyhou/en).
 
