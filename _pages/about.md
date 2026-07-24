@@ -55,7 +55,7 @@ Before joining OU, I was a research assistant at **ICNLab, Peking University She
   <li>
     <span class="hp-date">Apr 2026</span>
     <span class="hp-badge">Accepted</span>
-    🎉 Our paper <strong>"Continuous-Time Modeling of Crypto Limit Order Books with Liquid Neural Networks"</strong> (Paper&nbsp;#384) has been accepted by <strong>WAIN 2026</strong>. Many thanks to the program committee and all collaborators!
+    🎉 Our paper <strong>"Continuous-Time Modeling of Crypto Limit Order Books with Liquid Neural Networks"</strong> (Paper&nbsp;#384) has been accepted by the <strong>International Workshop on AI in Networks and Distributed Systems (WAIN 2026)</strong>. Many thanks to the program committee and all collaborators!
   </li>
 </ul>
 
