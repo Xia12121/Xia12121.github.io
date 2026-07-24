@@ -48,9 +48,14 @@ Before joining OU, I was a research assistant at **ICNLab, Peking University She
 
 <ul class="hp-news">
   <li>
+    <span class="hp-date">Jul 2026</span>
+    <span class="hp-badge">Accepted</span>
+    🎉 Our paper <strong>"ReclaimNet: Reclaim-Aware Network Protocols for Voluntary GPU Sharing on Campus"</strong> (Paper&nbsp;#954) has been accepted to appear at the <strong>34th IEEE International Conference on Network Protocols (ICNP 2026)</strong>. Many thanks to the program committee and all collaborators!
+  </li>
+  <li>
     <span class="hp-date">Apr 2026</span>
     <span class="hp-badge">Accepted</span>
-    🎉 Our paper <strong>"Liquid Time Constant Neural Networks for Crypto LOB Prediction: A Benchmark Study"</strong> (Paper&nbsp;#5901) has been accepted by <strong>KSEM 2026</strong> as an <strong>AICom2</strong> paper. Many thanks to the program committee and all collaborators!
+    🎉 Our paper <strong>"Continuous-Time Modeling of Crypto Limit Order Books with Liquid Neural Networks"</strong> (Paper&nbsp;#384) has been accepted by <strong>WAIN 2026</strong>. Many thanks to the program committee and all collaborators!
   </li>
 </ul>
 

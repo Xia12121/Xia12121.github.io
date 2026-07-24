@@ -46,9 +46,14 @@ lang: zh
 
 <ul class="hp-news">
   <li>
+    <span class="hp-date">2026 年 7 月</span>
+    <span class="hp-badge">已录用</span>
+    🎉 我们的论文 <strong>"ReclaimNet: Reclaim-Aware Network Protocols for Voluntary GPU Sharing on Campus"</strong>（论文编号&nbsp;#954）已被<strong>第 34 届 IEEE 国际网络协议会议（ICNP 2026）</strong>录用。感谢程序委员会和所有合作者！
+  </li>
+  <li>
     <span class="hp-date">2026 年 4 月</span>
     <span class="hp-badge">已录用</span>
-    🎉 我们的论文 <strong>"Liquid Time Constant Neural Networks for Crypto LOB Prediction: A Benchmark Study"</strong>（论文编号&nbsp;#5901）已被 <strong>KSEM 2026</strong> 接收为 <strong>AICom2</strong> 论文。感谢程序委员会和所有合作者！
+    🎉 我们的论文 <strong>"Continuous-Time Modeling of Crypto Limit Order Books with Liquid Neural Networks"</strong>（论文编号&nbsp;#384）已被 <strong>WAIN 2026</strong> 接收。感谢程序委员会和所有合作者！
   </li>
 </ul>
 
