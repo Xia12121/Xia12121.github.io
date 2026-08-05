@@ -66,23 +66,8 @@ Before joining OU, I was a research assistant at **ICNLab, Peking University She
 </p>
 
 <div class="hp-pub-group">
-  <div class="hp-pub-group-title">Under Review / Preprints</div>
+  <div class="hp-pub-group-title">Preprints</div>
   <ol class="hp-pub-list">
-    <li class="hp-pub">
-      <div class="hp-pub-authors"><strong>Linhan Xia</strong>, Rui Zhu, Shivakumar Raman, Lee Graves, Yifu Li*</div>
-      <div class="hp-pub-title">VeriCAD: Compiler-Grounded Reinforcement Learning for Executable and Aligned Text-to-CAD Generation</div>
-      <div class="hp-pub-venue"><span class="hp-pub-badge hp-pub-badge-review">Under Review</span></div>
-    </li>
-    <li class="hp-pub">
-      <div class="hp-pub-authors"><strong>Linhan Xia</strong>, Rui Zhu, Shivakumar Raman, Lee Graves, Yifu Li*</div>
-      <div class="hp-pub-title">CPD-LLM: Customized Product Design (CPD) via a Design Syntax-Aware Large Language Model (LLM)</div>
-      <div class="hp-pub-venue"><span class="hp-pub-badge hp-pub-badge-review">Under Review</span></div>
-    </li>
-    <li class="hp-pub">
-      <div class="hp-pub-authors">Qiankang Xv, Haixiao Hu, <strong>Linhan Xia</strong>, Jingjing Wang, Weifan Lin, Yu Guo, Xianneng Zou, Kai Lei*</div>
-      <div class="hp-pub-title">Mamba4Net-MoE: Efficient Multi-Task Network Intelligence via Mixture-of-Experts Distillation on Linear State Space Models</div>
-      <div class="hp-pub-venue"><span class="hp-pub-badge hp-pub-badge-review">Under Review</span></div>
-    </li>
     <li class="hp-pub">
       <div class="hp-pub-authors"><strong>Linhan Xia</strong>, Yicheng Yang, Ziou Chen, Zheng Yang, Shengxin Zhu*</div>
       <div class="hp-pub-title"><a href="https://arxiv.org/abs/2407.09157" target="_blank" rel="noopener">Movie Recommendation with Poster Attention via Multi-modal Transformer Feature Fusion</a></div>
