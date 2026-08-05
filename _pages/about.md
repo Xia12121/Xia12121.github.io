@@ -104,30 +104,6 @@ Before joining OU, I was a research assistant at **ICNLab, Peking University She
         24th International Conference on Communication Technology (ICCT)
       </div>
     </li>
-    <li class="hp-pub">
-      <div class="hp-pub-authors"><strong>Linhan Xia*</strong>, Junbang Liu, Tong Wu</div>
-      <div class="hp-pub-title"><a href="https://ieeexplore.ieee.org/document/10548595/" target="_blank" rel="noopener">Depth Estimation Algorithm Based on Transformer-Encoder and Feature Fusion</a></div>
-      <div class="hp-pub-venue">
-        <span class="hp-pub-badge hp-pub-badge-ei">EI</span>
-        7th International Conference on Advanced Algorithms and Control Engineering (AACE)
-      </div>
-    </li>
-    <li class="hp-pub">
-      <div class="hp-pub-authors"><strong>Linhan Xia*</strong>, Jinyuan Zhang, Bohan Wen</div>
-      <div class="hp-pub-title"><a href="https://doi.org/10.1145/3644523.3644657" target="_blank" rel="noopener">Optimization Decision Model of Vegetable Stock and Pricing Based on TCN-Attention and Genetic Algorithm</a></div>
-      <div class="hp-pub-venue">
-        <span class="hp-pub-badge hp-pub-badge-ei">EI</span>
-        4th International Conference on Computer Science and Management Technology (ICCSMT)
-      </div>
-    </li>
-    <li class="hp-pub">
-      <div class="hp-pub-authors"><strong>Linhan Xia*</strong></div>
-      <div class="hp-pub-title"><a href="https://doi.org/10.2991/978-94-6463-304-7_18" target="_blank" rel="noopener">Chinese Financial Comments Sentiment Detection Based on the Bert-TCN Model with HowNet Disambiguation</a></div>
-      <div class="hp-pub-venue">
-        <span class="hp-pub-badge hp-pub-badge-ei">EI</span>
-        3rd International Conference on Digital Economy and Computer Application (ICDECA)
-      </div>
-    </li>
   </ol>
 </div>
 
