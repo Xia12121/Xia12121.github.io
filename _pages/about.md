@@ -31,7 +31,7 @@ Before joining OU, I was a research assistant at **ICNLab, Peking University She
 
 <div class="hp-interests">
   <div class="hp-card">
-    <div class="hp-card-title">LLM-Driven Customized Product Design</div>
+    <div class="hp-card-title"><span class="hp-card-star" aria-hidden="true">★</span> LLM-Driven Customized Product Design <span class="hp-card-note">Dissertation Direction</span></div>
     <div class="hp-card-desc">Using large language models to generate CAD designs from natural-language requirements.</div>
   </div>
   <div class="hp-card">

@@ -331,6 +331,10 @@ html[data-theme="dark"] {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45) !important;
   }
   .hp-card-title { color: #eceff5 !important; }
+  .hp-card-note {
+    background: rgba(201, 107, 30, 0.18) !important;
+    color: #ffb070 !important;
+  }
   .hp-card-desc  { color: #aeb1b9 !important; }
 
   /* --- news --- */
@@ -778,6 +782,21 @@ html[data-theme="dark"] .sidebar .author__urls {
   font-size: 0.98em;
   margin-bottom: 0.25em;
   color: #222;
+}
+.hp-card-star {
+  color: #c96b1e;
+}
+.hp-card-note {
+  display: inline-block;
+  margin-left: 0.45em;
+  padding: 0.16em 0.5em;
+  border-radius: 999px;
+  background: rgba(132, 22, 23, 0.08);
+  color: #841617;
+  font-size: 0.72em;
+  font-weight: 700;
+  line-height: 1.35;
+  vertical-align: 0.12em;
 }
 .hp-card-desc {
   font-size: 0.88em;
