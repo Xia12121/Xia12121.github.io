@@ -41,10 +41,18 @@ body {
 
 /* --- Night-mode canvas: deep gradient + three layers of twinkling stars + nebula --- */
 html[data-theme="dark"] {
+  background: #03040a !important;
+
   body {
     background:
       radial-gradient(ellipse at 50% 0%, #1c1f33 0%, #0a0c18 55%, #03040a 100%) !important;
     background-attachment: fixed !important;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
     position: relative;
   }
@@ -108,8 +116,12 @@ html[data-theme="dark"] {
   /* Sit content above the star layers.
      Do NOT touch .masthead's positioning — theme sets it `position: fixed;
      top: 0` and overriding that unsticks it from the viewport top. */
-  #main,
-  .page__footer { position: relative; z-index: 1; }
+  #main {
+    position: relative;
+    z-index: 1;
+    flex: 1 0 auto;
+    margin-top: 0 !important;
+  }
 
   /* Re-assert masthead bg on top of stars (slight translucency for glass feel) */
   .masthead {
@@ -126,6 +138,9 @@ html[data-theme="dark"] {
 
   /* Footer subtle panel */
   .page__footer {
+    position: relative;
+    flex: 0 0 auto;
+    margin-top: 2rem;
     background: rgba(5, 7, 16, 0.7) !important;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -671,6 +686,11 @@ html[data-theme="dark"] .sidebar .author__urls {
 @media (max-width: 420px) {
   .hp-hero h1 { font-size: 1.22em !important; }
   .hp-hero .hp-sub { font-size: 0.85em; }
+}
+
+/* An empty overflow menu has no visual affordance to show. */
+.greedy-nav .hidden-links:empty {
+  display: none !important;
 }
 
 

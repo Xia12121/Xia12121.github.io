@@ -6,7 +6,9 @@
 */
 
 var $nav = $('#site-nav');
-var $btn = $('#site-nav button');
+// Only the overflow-menu button belongs to Greedy Navigation. The theme
+// toggle is also a button inside #site-nav and must remain independent.
+var $btn = $('#site-nav > button').not('.theme-toggle');
 var $vlinks = $('#site-nav .visible-links');
 var $hlinks = $('#site-nav .hidden-links');
 
