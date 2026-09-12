@@ -31,16 +31,20 @@ Before joining OU, I was a research assistant at **ICNLab, Peking University She
 
 <div class="hp-interests">
   <div class="hp-card">
-    <div class="hp-card-title">Data-driven modeling</div>
-    <div class="hp-card-desc">Continuous-time neural architectures, sequence modeling, and representation learning.</div>
+    <div class="hp-card-title">LLM-Driven Customized Product Design</div>
+    <div class="hp-card-desc">Using large language models to generate CAD designs from natural-language requirements.</div>
   </div>
   <div class="hp-card">
-    <div class="hp-card-title">Time-Series Forecasting</div>
-    <div class="hp-card-desc">Benchmarking and designing models for high-frequency and limit-order-book data.</div>
+    <div class="hp-card-title">Self-Evolving Agents</div>
+    <div class="hp-card-desc">Developing agents that learn, reflect, and improve their reasoning, planning, and tool use over time.</div>
   </div>
   <div class="hp-card">
-    <div class="hp-card-title">Financial Data Analytics</div>
-    <div class="hp-card-desc">Crypto market microstructure, quantitative signals, and systematic trading research.</div>
+    <div class="hp-card-title">Liquid &amp; Bio-Inspired Neural Networks</div>
+    <div class="hp-card-desc">Exploring adaptive continuous-time and biomimetic neural architectures for efficient, robust learning.</div>
+  </div>
+  <div class="hp-card">
+    <div class="hp-card-title">Complex Modeling of Highly Dynamic Systems</div>
+    <div class="hp-card-desc">Building data-driven and hybrid models for nonlinear, time-varying systems with rapid, complex dynamics.</div>
   </div>
 </div>
 

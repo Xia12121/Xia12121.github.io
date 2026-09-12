@@ -29,16 +29,20 @@ lang: zh
 
 <div class="hp-interests">
   <div class="hp-card">
-    <div class="hp-card-title">数据驱动建模</div>
-    <div class="hp-card-desc">连续时间神经架构、序列建模与表示学习。</div>
+    <div class="hp-card-title">大语言模型驱动的定制化产品设计</div>
+    <div class="hp-card-desc">利用大语言模型将自然语言需求转化为 CAD 设计。</div>
   </div>
   <div class="hp-card">
-    <div class="hp-card-title">时序预测</div>
-    <div class="hp-card-desc">面向高频交易与限价订单簿（LOB）数据的模型基准与设计。</div>
+    <div class="hp-card-title">智能体自进化</div>
+    <div class="hp-card-desc">研究能够持续学习、反思并提升推理、规划与工具使用能力的智能体。</div>
   </div>
   <div class="hp-card">
-    <div class="hp-card-title">金融数据分析</div>
-    <div class="hp-card-desc">加密市场微观结构、量化信号与系统化交易研究。</div>
+    <div class="hp-card-title">液态神经网络与仿生神经网络</div>
+    <div class="hp-card-desc">探索用于高效、稳健学习的自适应连续时间与仿生神经架构。</div>
+  </div>
+  <div class="hp-card">
+    <div class="hp-card-title">高动态复杂系统建模</div>
+    <div class="hp-card-desc">面向快速变化、非线性及时变系统，构建数据驱动与混合建模方法。</div>
   </div>
 </div>
 

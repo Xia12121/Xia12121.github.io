@@ -756,7 +756,7 @@ html[data-theme="dark"] .sidebar .author__urls {
 /* ---------- Research Interests cards ---------- */
 .hp-interests {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.8em;
   margin: 0.6em 0 0 0;
 }
@@ -783,6 +783,10 @@ html[data-theme="dark"] .sidebar .author__urls {
   font-size: 0.88em;
   color: #666;
   line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .hp-interests { grid-template-columns: 1fr; }
 }
 
 /* ---------- News timeline ---------- */
