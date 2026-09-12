@@ -611,15 +611,11 @@ html[data-theme="dark"] .sidebar .author__urls {
 
 /* Narrow phone (≤ 600px) — masthead-specific tweaks */
 @media (max-width: 600px) {
-  /* Site title: shrink + allow ellipsis so it doesn't collide with switchers */
+  /* Compact home mark so it doesn't collide with switchers */
   .masthead__menu-item--lg {
-    max-width: calc(100vw - 11rem);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-    a { font-size: 0.88em; }
+    padding-right: 1.5em;
   }
+  .masthead__site-icon { width: 34px; height: 34px; border-radius: 9px; }
   .masthead__inner-wrap { padding: 0.7em 0.9em 0.7em !important; }
 
   /* Language switcher — compact pill */
@@ -675,29 +671,6 @@ html[data-theme="dark"] .sidebar .author__urls {
 @media (max-width: 420px) {
   .hp-hero h1 { font-size: 1.22em !important; }
   .hp-hero .hp-sub { font-size: 0.85em; }
-
-  /* Hide long site title on ultra-narrow — the page itself is obvious */
-  .masthead__menu-item--lg a {
-    font-size: 0 !important;
-  }
-  .masthead__menu-item--lg a::after {
-    content: "LX";
-    font-size: 1rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #841617 0%, #c96b1e 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: 1px;
-  }
-
-  /* Dark-mode variant for the LX monogram */
-  html[data-theme="dark"] .masthead__menu-item--lg a::after {
-    background: linear-gradient(135deg, #ff9b5e 0%, #ffd580 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
 }
 
 
